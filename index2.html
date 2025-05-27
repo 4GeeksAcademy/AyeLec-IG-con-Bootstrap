@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>IG con Bootstrap - AyeLec</title>
+</head>
+<body>
+  <div class="container-fluid">
+    
+    <!-- BARRA DE NAVEGACION -->
+    <nav class="navbar navbar-light bg-light">
+        <div class="d-flex align-items-center">
+            <a class="navbar-brand" href="#">
+            <i class="fab fa-instagram fa-lg"></i>
+            Instagram
+            </a>
+        </div>
+
+        <div>
+          <button class="btn btn-success me-2" type="button">Create a new post</button>
+          <button class="btn btn-secondary" type="button">
+            <i class="fas fa-gear"></i>
+            <i class="fas fa-caret-down"></i>
+          </button>
+        </div>
+    </nav>
+
+    <!-- BOTONES DE PAGINAS -->
+    <ul class="nav justify-content-center display-selector mt-2">
+      <li class="nav-item">
+        <a class="nav-link" href="index.html"><i class="fas fa-th"></i></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" aria-current="page" href="index2.html"><i class="fas fa-square"></i></a>
+      </li>
+    </ul>
+
+    <!-- DISPLAY DE FOTOS -->
+    <div class="d-flex justify-content-center position-relative mt-3">
+        <div class="card sin-borde card-personalizada">
+            <div class="card-header d-flex justify-content-between align-items-center p-2">
+                <div class="card-title encabezado m-0">Lindo paisaje</div>
+                <p class="posicion-contador m-0">1/9</p>
+            </div>
+
+            <img src="fotos-ig-bts/imagen1.jpg" class="card-img-top sin-bordes" alt="lindo paisajito">
+
+            <div class="card-body p-2">
+                <p class="card-text likes mb-0"><strong>205 likes</strong></p>
+                <p class="card-text mensaje mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="d-flex justify-content-center position-relative mt-3">
+        <div class="card sin-borde card-personalizada">
+            <div class="card-header d-flex justify-content-between align-items-center p-2">
+                <div class="card-title encabezado m-0">Posando!</div>
+                <p class="posicion-contador m-0">3/9</p>
+            </div>
+
+            <img src="fotos-ig-bts/imagen3.jpg" class="card-img-top sin-bordes" alt="posando">
+
+            <div class="card-body p-2">
+                <p class="card-text likes mb-0"><strong>500 likes</strong></p>
+                <p class="card-text mensaje mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="d-flex justify-content-center position-relative mt-3">
+        <div class="card sin-borde card-personalizada">
+            <div class="card-header d-flex justify-content-between align-items-center p-2">
+                <div class="card-title encabezado m-0">Argentina!</div>
+                <p class="posicion-contador m-0">9/9</p>
+            </div>
+
+            <img src="fotos-ig-bts/imagen9.jpg" class="card-img-top sin-bordes" alt="bandera argentina">
+
+            <div class="card-body p-2">
+                <p class="card-text likes mb-0"><strong>350 likes</strong></p>
+                <p class="card-text mensaje mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+        </div>
+    </div>
+
+
+
+    
+
+
+    
+
+  </div>
+</body>
+</html>
