@@ -27,6 +27,29 @@ body {
   display: block;
 }
 
+.custom-icon-btn {
+  border: 1px solid #ced4da; 
+  border-radius: 0.375rem;  
+  color: black;
+  background-color: white;
+  width: 40px;
+  height: 40px;
+}
+
+.custom-icon-btn:hover {
+  background-color: #f8f9fa;
+  border-color: #adb5bd;
+}
+
+.custom-icon-btn i {
+  color: black;
+}
+
+.ml-neg-1 {
+  margin-left: -0.8rem; 
+  margin-top: -0.5rem;
+}
+
 /*CSS DEL INDEX 2 */
 
 .sin-borde {  
