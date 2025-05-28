@@ -50,6 +50,26 @@ body {
   margin-top: -0.5rem;
 }
 
+@media (max-width: 992px) {
+  .responsive-buttons .btn {
+    padding: 0.375rem 0.75rem; 
+    font-size: 0.875rem;      
+  }
+
+  .navbar-brand {
+    font-size: 1rem;
+  }
+
+  .responsive-buttons {
+    flex-wrap: wrap;
+  }
+
+  .navbar-brand {
+    margin-bottom: 0.5rem;
+  }
+}
+
+
 /*CSS DEL INDEX 2 */
 
 .sin-borde {  
