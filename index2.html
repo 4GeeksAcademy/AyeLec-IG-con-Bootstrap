@@ -84,7 +84,8 @@
       </li>
     </ul>
 
-    <!-- DISPLAY DE FOTOS -->
+    <!-- DISPLAY DE FOTOS INDIVIDUALES -->
+    <div id="vistaLista" class="d-none">
     <div class="d-flex justify-content-center position-relative mt-3">
         <div class="card sin-borde card-personalizada">
             <div class="card-header d-flex justify-content-between align-items-center p-2">
@@ -228,6 +229,7 @@
             </div>
         </div>
     </div>
+    </div>
 
 
 
@@ -239,6 +241,17 @@
   </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      function mostrarCuadricula() {
+        document.getElementById("vistaCuadricula").classList.remove("d-none");
+        document.getElementById("vistaLista").classList.add("d-none");
+      }
+
+      function mostrarLista() {
+        document.getElementById("vistaCuadricula").classList.add("d-none");
+        document.getElementById("vistaLista").classList.remove("d-none");
+      }
+    </script>
 
 </body>
 </html>

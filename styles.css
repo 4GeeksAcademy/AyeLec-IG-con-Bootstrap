@@ -9,7 +9,6 @@ body {
 
 .display-selector i {
   color: gray;
-  transition: color 0.3s;
 }
 
 .display-selector .nav-link.active i {
@@ -79,37 +78,3 @@ body {
 }
 
 
-/*CSS DEL INDEX 2 */
-
-.sin-borde {  
-  box-shadow: none;
-  width: 50rem;
-}
-
-.posicion-contador {
-  position: absolute;
-  top: 5px;
-  right: 10px;
-  margin: 0;
-  font-size: 0.9rem;
-  color: gray;
-}
-
-.encabezado,
-.likes {
-  font-weight: bold;
-}
-
-.likes {
-  margin-top: 0.1rem; 
-  margin-bottom: 0.1rem;
-}
-
-.mensaje {
-  margin-top: 0;
-}
-
-.card-img-top {
-  border-radius: 0;
-  width: 100%;
-}
