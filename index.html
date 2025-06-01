@@ -9,16 +9,18 @@
     <title>IG con Bootstrap - AyeLec</title>
 </head>
 <body>
-  <div class="container-fluid">
-    <nav class="navbar navbar-light bg-light"> 
-      <div class="d-flex align-items-center mb-2 mb-md-0"> 
+  
+    
+    <!-- BARRA DE NAVEGACION SUPERIOR -->
+    <nav class="navbar navbar-light"> 
+      <div class="d-flex ms-2 logo"> 
         <a class="navbar-brand" href="index.html">
-          <i class="fab fa-instagram fa-lg me-2"></i> 
+          <i class="fab fa-instagram fa-lg"></i> 
           Instagram
         </a>
       </div>
 
-      <ul class="nav nav-pills justify-content-end gap-2 responsive-buttons mb-0"> 
+      <ul class="nav nav-pills justify-content-end gap-2 mb-0 me-2"> 
         <li class="nav-item">
           <button type="button" class="btn bg-success text-white" data-bs-toggle="modal" data-bs-target="#exampleModal">
             Create a new post
@@ -37,259 +39,244 @@
           </ul>
         </li>
       </ul>
-  </nav>
+    </nav>
 
-  <!-- CARTEL DEL MODAL -->
-  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"> 
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5" id="exampleModalLabel">Create a new post</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <form>
-            <div class="mb-3">
-              <label for="message-text" class="col-form-label">Caption:</label>
-              <textarea class="form-control text-secondary" id="message-text" placeholder="Add the caption of your post here"></textarea>
-            </div>
-            <div class="d-flex gap-3">
-              <button type="button" class="btn custom-icon-btn">
-                <i class="fas fa-camera"></i>
-              </button>
-              <button type="button" class="btn custom-icon-btn">
-                <i class="fas fa-map-marker-alt"></i>
-              </button>
-            </div>
-          </form>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-success">Publish</button>
+    <!-- CARTEL DEL MODAL -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"> 
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Create a new post</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <label for="message-text" class="col-form-label">Caption:</label>
+                <textarea class="form-control text-secondary" id="message-text" placeholder="Add the caption of your post here"></textarea>
+              </div>
+              <div class="d-flex gap-3">
+                <button type="button" class="btn custom-icon-btn">
+                  <i class="fas fa-camera"></i>
+                </button>
+                <button type="button" class="btn custom-icon-btn">
+                  <i class="fas fa-map-marker-alt"></i>
+                </button>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-success">Publish</button>
+          </div>
         </div>
       </div>
     </div>
-  </div>
 
-
-    <!-- BOTONES DE PAGINAS -->
-    <ul class="nav justify-content-center display-selector mt-2">
-      <li class="nav-item">
-        <a class="nav-link active" aria-current="page" href="#" onclick="mostrarCuadricula()"><i class="fas fa-th"></i></a>
+<div class="container-fluid">
+    
+  <!-- BOTONES DE PAGINAS -->
+    <ul class="nav nav-tabs justify-content-center display-selector mt-1" id="vistaTab" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="cuadricula-tab" data-bs-toggle="tab" data-bs-target="#vistaCuadricula" type="button" role="tab" aria-controls="vistaCuadricula" aria-selected="true">
+          <i class="fas fa-th"></i>
+        </button>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#" onclick="mostrarLista()"><i class="fas fa-square"></i></a>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="lista-tab" data-bs-toggle="tab" data-bs-target="#vistaLista" type="button" role="tab" aria-controls="vistaLista" aria-selected="false">
+          <i class="fas fa-square"></i>
+        </button>
       </li>
     </ul>
 
-    <!-- CUADRICULA DE FOTOS -->
-    <div id="vistaCuadricula">
-      <div class="row">
-        <div class="col-4 p-1">
-          <img src="fotos-ig-bts/imagen1.jpg" class="cuadrada">
+    <!-- CONTENIDO -->
+    <div class="tab-content mt-3" id="vistaTabContent">
+      
+      <!-- CONTENIDO ACTIVE CUADRICULA -->
+      <div class="tab-pane fade show active" id="vistaCuadricula" role="tabpanel" aria-labelledby="cuadricula-tab">
+        <div class="row">
+          <div class="col-4 p-1">
+            <img src="fotos-ig-bts/imagen1.jpg" class="cuadrada">
+          </div>
+          <div class="col-4 p-1">
+            <img src="fotos-ig-bts/imagen2.jpg" class="cuadrada">
+          </div>
+          <div class="col-4 p-1">
+            <img src="fotos-ig-bts/imagen3.jpg" class="cuadrada">
+          </div>
+          <div class="col-4 p-1">
+            <img src="fotos-ig-bts/imagen4.jpg" class="cuadrada">
+          </div>
+          <div class="col-4 p-1">
+            <img src="fotos-ig-bts/imagen5.jpg" class="cuadrada">
+          </div>
+          <div class="col-4 p-1">
+            <img src="fotos-ig-bts/imagen6.jpg" class="cuadrada">
+          </div>
+          <div class="col-4 p-1">
+            <img src="fotos-ig-bts/imagen7.jpg" class="cuadrada">
+          </div>
+          <div class="col-4 p-1">
+            <img src="fotos-ig-bts/imagen8.jpg" class="cuadrada">
+          </div>
+          <div class="col-4 p-1">
+            <img src="fotos-ig-bts/imagen9.jpg" class="cuadrada">
+          </div>
         </div>
-        <div class="col-4 p-1">
-          <img src="fotos-ig-bts/imagen2.jpg" class="cuadrada">
+      </div>
+      
+      <!-- CONTENIDO EN LISTA -->
+      <div class="tab-pane fade" id="vistaLista" role="tabpanel" aria-labelledby="lista-tab">
+        <div class="d-flex justify-content-center position-relative mt-3">
+            <div class="card sin-borde card-personalizada">
+                <div class="card-header d-flex justify-content-between align-items-center p-2">
+                    <div class="card-title encabezado m-0">Lindo paisaje</div>
+                    <p class="posicion-contador m-0">1/9</p>
+                </div>
+
+                <img src="fotos-ig-bts/imagen1.jpg" class="card-img-top sin-bordes">
+
+                <div class="card-body p-2">
+                    <p class="card-text likes mb-0"><strong>205 likes</strong></p>
+                    <p class="card-text mensaje mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+            </div>
         </div>
-        <div class="col-4 p-1">
-          <img src="fotos-ig-bts/imagen3.jpg" class="cuadrada">
+
+        <div class="d-flex justify-content-center position-relative mt-3">
+            <div class="card sin-borde card-personalizada">
+                <div class="card-header d-flex justify-content-between align-items-center p-2">
+                    <div class="card-title encabezado m-0">Una bella flor!</div>
+                    <p class="posicion-contador m-0">2/9</p>
+                </div>
+
+                <img src="fotos-ig-bts/imagen2.jpg" class="card-img-top sin-bordes">
+
+                <div class="card-body p-2">
+                    <p class="card-text likes mb-0"><strong>500 likes</strong></p>
+                    <p class="card-text mensaje mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+            </div>
         </div>
-        <div class="col-4 p-1">
-          <img src="fotos-ig-bts/imagen4.jpg" class="cuadrada">
+
+        <div class="d-flex justify-content-center position-relative mt-3">
+            <div class="card sin-borde card-personalizada">
+                <div class="card-header d-flex justify-content-between align-items-center p-2">
+                    <div class="card-title encabezado m-0">Posando!</div>
+                    <p class="posicion-contador m-0">3/9</p>
+                </div>
+
+                <img src="fotos-ig-bts/imagen3.jpg" class="card-img-top sin-bordes">
+
+                <div class="card-body p-2">
+                    <p class="card-text likes mb-0"><strong>350 likes</strong></p>
+                    <p class="card-text mensaje mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+            </div>
         </div>
-        <div class="col-4 p-1">
-          <img src="fotos-ig-bts/imagen5.jpg" class="cuadrada">
+
+        <div class="d-flex justify-content-center position-relative mt-3">
+            <div class="card sin-borde card-personalizada">
+                <div class="card-header d-flex justify-content-between align-items-center p-2">
+                    <div class="card-title encabezado m-0">Un buen desayuno</div>
+                    <p class="posicion-contador m-0">4/9</p>
+                </div>
+
+                <img src="fotos-ig-bts/imagen4.jpg" class="card-img-top sin-bordes">
+
+                <div class="card-body p-2">
+                    <p class="card-text likes mb-0"><strong>150 likes</strong></p>
+                    <p class="card-text mensaje mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+            </div>
         </div>
-        <div class="col-4 p-1">
-          <img src="fotos-ig-bts/imagen6.jpg" class="cuadrada">
+
+        <div class="d-flex justify-content-center position-relative mt-3">
+            <div class="card sin-borde card-personalizada">
+                <div class="card-header d-flex justify-content-between align-items-center p-2">
+                    <div class="card-title encabezado m-0">Frutos rojos</div>
+                    <p class="posicion-contador m-0">5/9</p>
+                </div>
+
+                <img src="fotos-ig-bts/imagen5.jpg" class="card-img-top sin-bordes">
+
+                <div class="card-body p-2">
+                    <p class="card-text likes mb-0"><strong>150 likes</strong></p>
+                    <p class="card-text mensaje mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+            </div>
         </div>
-        <div class="col-4 p-1">
-          <img src="fotos-ig-bts/imagen7.jpg" class="cuadrada">
+
+        <div class="d-flex justify-content-center position-relative mt-3">
+            <div class="card sin-borde card-personalizada">
+                <div class="card-header d-flex justify-content-between align-items-center p-2">
+                    <div class="card-title encabezado m-0">Tierno perrito</div>
+                    <p class="posicion-contador m-0">6/9</p>
+                </div>
+
+                <img src="fotos-ig-bts/imagen6.jpg" class="card-img-top sin-bordes">
+
+                <div class="card-body p-2">
+                    <p class="card-text likes mb-0"><strong>600 likes</strong></p>
+                    <p class="card-text mensaje mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+            </div>
         </div>
-        <div class="col-4 p-1">
-          <img src="fotos-ig-bts/imagen8.jpg" class="cuadrada">
+
+        <div class="d-flex justify-content-center position-relative mt-3">
+            <div class="card sin-borde card-personalizada">
+                <div class="card-header d-flex justify-content-between align-items-center p-2">
+                    <div class="card-title encabezado m-0">Mi bicicleta</div>
+                    <p class="posicion-contador m-0">7/9</p>
+                </div>
+
+                <img src="fotos-ig-bts/imagen7.jpg" class="card-img-top sin-bordes">
+
+                <div class="card-body p-2">
+                    <p class="card-text likes mb-0"><strong>850</strong></p>
+                    <p class="card-text mensaje mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+            </div>
         </div>
-        <div class="col-4 p-1">
-          <img src="fotos-ig-bts/imagen9.jpg" class="cuadrada">
+
+        <div class="d-flex justify-content-center position-relative mt-3">
+            <div class="card sin-borde card-personalizada">
+                <div class="card-header d-flex justify-content-between align-items-center p-2">
+                    <div class="card-title encabezado m-0">Posando!</div>
+                    <p class="posicion-contador m-0">8/9</p>
+                </div>
+
+                <img src="fotos-ig-bts/imagen8.jpg" class="card-img-top sin-bordes">
+
+                <div class="card-body p-2">
+                    <p class="card-text likes mb-0"><strong>950 likes</strong></p>
+                    <p class="card-text mensaje mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="d-flex justify-content-center position-relative mt-3">
+            <div class="card sin-borde card-personalizada">
+                <div class="card-header d-flex justify-content-between align-items-center p-2">
+                    <div class="card-title encabezado m-0">Argentina!</div>
+                    <p class="posicion-contador m-0">9/9</p>
+                </div>
+
+                <img src="fotos-ig-bts/imagen9.jpg" class="card-img-top sin-bordes">
+
+                <div class="card-body p-2">
+                    <p class="card-text likes mb-0"><strong>1000 likes</strong></p>
+                    <p class="card-text mensaje mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+            </div>
         </div>
       </div>
     </div>
 
-  
-  <!-- DISPLAY DE FOTOS INDIVIDUALES -->
-    <div id="vistaLista" class="d-none">
-    <div class="d-flex justify-content-center position-relative mt-3">
-        <div class="card sin-borde card-personalizada">
-            <div class="card-header d-flex justify-content-between align-items-center p-2">
-                <div class="card-title encabezado m-0">Lindo paisaje</div>
-                <p class="posicion-contador m-0">1/9</p>
-            </div>
-
-            <img src="fotos-ig-bts/imagen1.jpg" class="card-img-top sin-bordes">
-
-            <div class="card-body p-2">
-                <p class="card-text likes mb-0"><strong>205 likes</strong></p>
-                <p class="card-text mensaje mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="d-flex justify-content-center position-relative mt-3">
-        <div class="card sin-borde card-personalizada">
-            <div class="card-header d-flex justify-content-between align-items-center p-2">
-                <div class="card-title encabezado m-0">Una bella flor!</div>
-                <p class="posicion-contador m-0">2/9</p>
-            </div>
-
-            <img src="fotos-ig-bts/imagen2.jpg" class="card-img-top sin-bordes">
-
-            <div class="card-body p-2">
-                <p class="card-text likes mb-0"><strong>500 likes</strong></p>
-                <p class="card-text mensaje mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="d-flex justify-content-center position-relative mt-3">
-        <div class="card sin-borde card-personalizada">
-            <div class="card-header d-flex justify-content-between align-items-center p-2">
-                <div class="card-title encabezado m-0">Posando!</div>
-                <p class="posicion-contador m-0">3/9</p>
-            </div>
-
-            <img src="fotos-ig-bts/imagen3.jpg" class="card-img-top sin-bordes">
-
-            <div class="card-body p-2">
-                <p class="card-text likes mb-0"><strong>350 likes</strong></p>
-                <p class="card-text mensaje mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="d-flex justify-content-center position-relative mt-3">
-        <div class="card sin-borde card-personalizada">
-            <div class="card-header d-flex justify-content-between align-items-center p-2">
-                <div class="card-title encabezado m-0">Un buen desayuno</div>
-                <p class="posicion-contador m-0">4/9</p>
-            </div>
-
-            <img src="fotos-ig-bts/imagen4.jpg" class="card-img-top sin-bordes">
-
-            <div class="card-body p-2">
-                <p class="card-text likes mb-0"><strong>150 likes</strong></p>
-                <p class="card-text mensaje mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="d-flex justify-content-center position-relative mt-3">
-        <div class="card sin-borde card-personalizada">
-            <div class="card-header d-flex justify-content-between align-items-center p-2">
-                <div class="card-title encabezado m-0">Frutos rojos</div>
-                <p class="posicion-contador m-0">5/9</p>
-            </div>
-
-            <img src="fotos-ig-bts/imagen5.jpg" class="card-img-top sin-bordes">
-
-            <div class="card-body p-2">
-                <p class="card-text likes mb-0"><strong>150 likes</strong></p>
-                <p class="card-text mensaje mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="d-flex justify-content-center position-relative mt-3">
-        <div class="card sin-borde card-personalizada">
-            <div class="card-header d-flex justify-content-between align-items-center p-2">
-                <div class="card-title encabezado m-0">Tierno perrito</div>
-                <p class="posicion-contador m-0">6/9</p>
-            </div>
-
-            <img src="fotos-ig-bts/imagen6.jpg" class="card-img-top sin-bordes">
-
-            <div class="card-body p-2">
-                <p class="card-text likes mb-0"><strong>600 likes</strong></p>
-                <p class="card-text mensaje mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="d-flex justify-content-center position-relative mt-3">
-        <div class="card sin-borde card-personalizada">
-            <div class="card-header d-flex justify-content-between align-items-center p-2">
-                <div class="card-title encabezado m-0">Mi bicicleta</div>
-                <p class="posicion-contador m-0">7/9</p>
-            </div>
-
-            <img src="fotos-ig-bts/imagen7.jpg" class="card-img-top sin-bordes">
-
-            <div class="card-body p-2">
-                <p class="card-text likes mb-0"><strong>850</strong></p>
-                <p class="card-text mensaje mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="d-flex justify-content-center position-relative mt-3">
-        <div class="card sin-borde card-personalizada">
-            <div class="card-header d-flex justify-content-between align-items-center p-2">
-                <div class="card-title encabezado m-0">Posando!</div>
-                <p class="posicion-contador m-0">8/9</p>
-            </div>
-
-            <img src="fotos-ig-bts/imagen8.jpg" class="card-img-top sin-bordes">
-
-            <div class="card-body p-2">
-                <p class="card-text likes mb-0"><strong>950 likes</strong></p>
-                <p class="card-text mensaje mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="d-flex justify-content-center position-relative mt-3">
-        <div class="card sin-borde card-personalizada">
-            <div class="card-header d-flex justify-content-between align-items-center p-2">
-                <div class="card-title encabezado m-0">Argentina!</div>
-                <p class="posicion-contador m-0">9/9</p>
-            </div>
-
-            <img src="fotos-ig-bts/imagen9.jpg" class="card-img-top sin-bordes">
-
-            <div class="card-body p-2">
-                <p class="card-text likes mb-0"><strong>1000 likes</strong></p>
-                <p class="card-text mensaje mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </div>
-        </div>
-    </div>
-    </div>
-
-
-    
-
+    <!-- FIN DEL CONTENIDO -->
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script>
-      function mostrarCuadricula() {
-        document.getElementById("vistaCuadricula").classList.remove("d-none");
-        document.getElementById("vistaLista").classList.add("d-none");
-        
-        // Cambiar clase activa
-        const botones = document.querySelectorAll('.display-selector .nav-link');
-        botones[0].classList.add('active');
-        botones[1].classList.remove('active');
-      }
-
-      function mostrarLista() {
-        document.getElementById("vistaCuadricula").classList.add("d-none");
-        document.getElementById("vistaLista").classList.remove("d-none");
-         
-        // Cambiar clase activa
-        const botones = document.querySelectorAll('.display-selector .nav-link');
-        botones[0].classList.remove('active');
-        botones[1].classList.add('active');
-      }
-    </script>
-
+  
 </body>
 </html>
