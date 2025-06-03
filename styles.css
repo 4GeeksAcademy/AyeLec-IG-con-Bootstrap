@@ -7,10 +7,6 @@ body {
   height: 5rem;
 }
 
-.logo {
-  margin-top: -1.875rem;
-}
-
 .nav-tabs {
   border-bottom: none;
 }
@@ -27,7 +23,6 @@ body {
 
 .container-fluid {
     background-color: white;
-    padding: 1rem;
 }
 
 .display-selector i {

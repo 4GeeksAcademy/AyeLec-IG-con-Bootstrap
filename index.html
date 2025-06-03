@@ -13,7 +13,7 @@
     
     <!-- BARRA DE NAVEGACION SUPERIOR -->
     <nav class="navbar navbar-light"> 
-      <div class="d-flex ms-2 logo"> 
+      <div class="d-flex ms-2 pb-4 logo"> 
         <a class="navbar-brand" href="index.html">
           <i class="fab fa-instagram fa-lg"></i> 
           Instagram
@@ -27,7 +27,7 @@
           </button>
         </li>
         <li class="nav-item dropdown">
-          <button class="btn bg-secondary text-white dropdown-toggle" type="button" id="gearDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+          <button class="btn bg-secondary text-white dropdown-toggle" type="button" id="gearDropdown" data-bs-toggle="dropdown">
             <i class="fas fa-gear"></i>
           </button>
           <ul class="dropdown-menu dropdown-menu-end"> 
@@ -42,12 +42,12 @@
     </nav>
 
     <!-- CARTEL DEL MODAL -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"> 
+    <div class="modal fade" id="exampleModal" tabindex="-1"> 
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
             <h1 class="modal-title fs-5" id="exampleModalLabel">Create a new post</h1>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
           </div>
           <div class="modal-body">
             <form>
@@ -73,17 +73,17 @@
       </div>
     </div>
 
-<div class="container-fluid">
+<div class="container-fluid p-3">
     
   <!-- BOTONES DE PAGINAS -->
     <ul class="nav nav-tabs justify-content-center display-selector mt-1" id="vistaTab" role="tablist">
       <li class="nav-item" role="presentation">
-        <button class="nav-link active" id="cuadricula-tab" data-bs-toggle="tab" data-bs-target="#vistaCuadricula" type="button" role="tab" aria-controls="vistaCuadricula" aria-selected="true">
+        <button class="nav-link active" id="cuadricula-tab" data-bs-toggle="tab" data-bs-target="#vistaCuadricula" type="button" role="tab">
           <i class="fas fa-th"></i>
         </button>
       </li>
       <li class="nav-item" role="presentation">
-        <button class="nav-link" id="lista-tab" data-bs-toggle="tab" data-bs-target="#vistaLista" type="button" role="tab" aria-controls="vistaLista" aria-selected="false">
+        <button class="nav-link" id="lista-tab" data-bs-toggle="tab" data-bs-target="#vistaLista" type="button" role="tab">
           <i class="fas fa-square"></i>
         </button>
       </li>
@@ -93,7 +93,7 @@
     <div class="tab-content mt-3" id="vistaTabContent">
       
       <!-- CONTENIDO ACTIVE CUADRICULA -->
-      <div class="tab-pane fade show active" id="vistaCuadricula" role="tabpanel" aria-labelledby="cuadricula-tab">
+      <div class="tab-pane fade show active" id="vistaCuadricula" role="tabpanel">
         <div class="row">
           <div class="col-4 p-1">
             <img src="fotos-ig-bts/imagen1.jpg" class="cuadrada">
@@ -126,7 +126,7 @@
       </div>
       
       <!-- CONTENIDO EN LISTA -->
-      <div class="tab-pane fade" id="vistaLista" role="tabpanel" aria-labelledby="lista-tab">
+      <div class="tab-pane fade" id="vistaLista" role="tabpanel">
         <div class="d-flex justify-content-center position-relative mt-3">
             <div class="card sin-borde card-personalizada">
                 <div class="card-header d-flex justify-content-between align-items-center p-2">
