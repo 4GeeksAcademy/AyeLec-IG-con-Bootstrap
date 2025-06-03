@@ -71,9 +71,13 @@ body {
   color: black;
 }
 
+.sin-bordes {
+  border-radius: 0;
+}
 
-
-
+.card {
+  width: 450px; /* o el valor que prefieras */
+}
 
 
 
